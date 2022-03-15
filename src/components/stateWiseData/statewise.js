@@ -15,8 +15,7 @@ const Statewise = () => {
 
   return (
     <>
-      <h1> INDIA COVID-19 Dashboard</h1>
-      <div className="container-fluid mt-5">
+           <div className="container-fluid mt-5">
         <div className="main-heading">
           <h1 className="mb-5">
             {" "}
