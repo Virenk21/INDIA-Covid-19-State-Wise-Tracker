@@ -15,9 +15,9 @@ const Statewise = () => {
 
   return (
     <>
-           <div className="container-fluid mt-5">
+      <div className="container-fluid mt-5">
         <div className="main-heading">
-          <h1 className="mb-5">
+          <h1 className="mb-5 text-center">
             {" "}
             <span className="font-weight-bold">INDIA</span>Covid-19 Dashboard
           </h1>
@@ -26,14 +26,48 @@ const Statewise = () => {
           <table clasName="table table-hover">
             <thead className="thead-dark">
               <tr>
-                <th>State</th>
-                <th>confirmed</th>
-                <th>recovered</th>
-                <th>deaths</th>
-                <th>active</th>
-                <th>updated</th>
+                <td>State</td>
+                <td>confirmed</td>
+                <td>recovered</td>
+                <td>deaths</td>
+                <td>active</td>
+                <td>updated</td>
               </tr>
             </thead>
+            <tbody>
+              <tr>
+                <td>State</td>
+                <td>confirmed</td>
+                <td>recovered</td>
+                <td>deaths</td>
+                <td>active</td>
+                <td>updated</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>confirmed</td>
+                <td>recovered</td>
+                <td>deaths</td>
+                <td>active</td>
+                <td>updated</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>confirmed</td>
+                <td>recovered</td>
+                <td>deaths</td>
+                <td>active</td>
+                <td>updated</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>confirmed</td>
+                <td>recovered</td>
+                <td>deaths</td>
+                <td>active</td>
+                <td>updated</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
