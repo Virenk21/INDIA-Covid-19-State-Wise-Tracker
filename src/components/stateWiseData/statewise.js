@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useState,useEffect } from 'react'
 
 const Statewise = () => {
+
+    const [data, setData] = useState([]);
 
     const getCovidData = async () => {
        const res = await fetch('https://api.rootnet.in/covid19-in/stats/latest');
         const actualData = await res.json();
         console.log(actualData.regional);
+        setData(actualData.regional);
     }
 
     useEffect(() => {
@@ -26,7 +29,7 @@ const Statewise = () => {
           <table clasName="table table-hover">
             <thead className="thead-dark">
               <tr>
-                <td>State</td>
+                <th>State</th>
                 <td>confirmed</td>
                 <td>recovered</td>
                 <td>deaths</td>
@@ -35,38 +38,24 @@ const Statewise = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>State</td>
-                <td>confirmed</td>
-                <td>recovered</td>
-                <td>deaths</td>
-                <td>active</td>
-                <td>updated</td>
-              </tr>
-              <tr>
-                <td>State</td>
-                <td>confirmed</td>
-                <td>recovered</td>
-                <td>deaths</td>
-                <td>active</td>
-                <td>updated</td>
-              </tr>
-              <tr>
-                <td>State</td>
-                <td>confirmed</td>
-                <td>recovered</td>
-                <td>deaths</td>
-                <td>active</td>
-                <td>updated</td>
-              </tr>
-              <tr>
-                <td>State</td>
-                <td>confirmed</td>
-                <td>recovered</td>
-                <td>deaths</td>
-                <td>active</td>
-                <td>updated</td>
-              </tr>
+
+                {
+                    data.map((curElem, ind) => {
+                        return (
+                          <tr>
+                            <th>State</th>
+                            <td>confirmed</td>
+                            <td>recovered</td>
+                            <td>deaths</td>
+                            <td>active</td>
+                            <td>updated</td>
+                          </tr>
+                        );
+
+                    })
+
+                }
+                                   
             </tbody>
           </table>
         </div>
