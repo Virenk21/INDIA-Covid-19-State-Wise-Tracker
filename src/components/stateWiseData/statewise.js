@@ -42,7 +42,7 @@ const Statewise = () => {
                 {
                     data.map((curElem, ind) => {
                         return (
-                          <tr>
+                          <tr key={ind}>
                             <th> {curElem.state} </th>
                             <td> {curElem.confirmed} </td>
                             <td> {curElem.recovered} </td>
