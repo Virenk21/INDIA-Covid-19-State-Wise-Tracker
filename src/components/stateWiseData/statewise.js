@@ -5,10 +5,10 @@ const Statewise = () => {
     const [data, setData] = useState([]);
 
     const getCovidData = async () => {
-       const res = await fetch('https://api.rootnet.in/covid19-in/stats/latest');
+       const res = await fetch("https://data.covid19india.org/data.json");
         const actualData = await res.json();
-        console.log(actualData.regional);
-        setData(actualData.regional);
+        console.log(actualData.statewise);
+        setData(actualData.statewise);
     }
 
     useEffect(() => {
@@ -43,12 +43,12 @@ const Statewise = () => {
                     data.map((curElem, ind) => {
                         return (
                           <tr>
-                            <th>State</th>
-                            <td>confirmed</td>
-                            <td>recovered</td>
-                            <td>deaths</td>
-                            <td>active</td>
-                            <td>updated</td>
+                            <th> {curElem.state} </th>
+                            <td> {curElem.confirmed} </td>
+                            <td> {curElem.recovered} </td>
+                            <td> {curElem.deaths} </td>
+                            <td> {curElem.active} </td>
+                            <td> {curElem.updated} </td>
                           </tr>
                         );
 
