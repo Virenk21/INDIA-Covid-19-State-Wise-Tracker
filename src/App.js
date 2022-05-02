@@ -1,13 +1,14 @@
 import './App.css';
 import React from "react";
-import Statewise from "./components/stateWiseData/statewise";
+import Stwise from "./components/stateWiseData/stwise";
 
 function App() {
   return (
     <div>
-      <Statewise />
+      <Stwise />
     </div>
-  );
-}
+  )
+  
+};
 
 export default App;
